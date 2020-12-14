@@ -121,9 +121,10 @@ class ProductController extends Controller
     {
 
         $product = Product::where('id',$product_id)->delete();
-		return redirect()->back()->with('success', 'Delete Successfully');
+		
 		if($product == 1) {
             return response()->json(["status" => "success", "message" => "Success! Product deleted"]);
+			return redirect()->back();
         }
 
         else {

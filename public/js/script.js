@@ -70,11 +70,13 @@
 
                 if(res.status == "success") {
                     $(".result").html("<div class='alert alert-success alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>" + res.message+ "</div>");
-                }
+					window.location.reload();
+				}
 
                 else if(res.status == "failed") {
                     $(".result").html("<div class='alert alert-danger alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>" + res.message+ "</div>");
                 }
+				
             }
         });
     }
@@ -98,7 +100,8 @@
 
                 if(res.status == "success") {
                     $(".result").html("<div class='alert alert-success alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>" + res.message+ "</div>");
-                }
+					window.location.reload();
+			   }
 
                 else if(res.status == "failed") {
                     $(".result").html("<div class='alert alert-danger alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>" + res.message+ "</div>");
@@ -118,15 +121,18 @@
 
                 success:function(res) {
                     if(res.status == "success") {
+						
                         $("#result").html("<div class='alert alert-success alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>" + res.message + "</div>");
-						console.log(res);
+						window.location.reload();
 					}
                     else if(res.status == "failed") {
                         $("#result").html("<div class='alert alert-success alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>" + res.message + "</div>");
 						console.log(res);
 					}
+					
                 }
             });
+			window.location.reload();
         }
     }
 
